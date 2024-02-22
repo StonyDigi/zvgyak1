@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <h1>Vizsgafeladat</h1>
+    <div class="form-group mb-3">
+        <label for="vizsgaltErtek">Vizsgálandó szám</label>
+        <input type="number" [(ngModel)]="VizsgaltErtek" name="vizsgaltErtek" id="vizsgaltErtek">
+    </div>
+    <button class="btn btn-primary form-control mb-3" (click)="eredmenyMentes()">Eredmény mentése</button>
+    <button class="btn btn-warning form-control mt3" (click)="reset()">Reset</button>
+    <p>A(z) {{VizsgaltErtek}} : {{EredmenyKiir()}}</p>
+    <ul>
+        <li *ngFor="let szam of megoldasok">
+        {{szam}}
+        </li>
+    </ul>
+  </div>
+  
